@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Commissioner:wght@400;500&family=Concert+One&family=Cormorant+Garamond:ital,wght@1,600&family=Dancing+Script:wght@700&family=Electrolize&family=Fasthand&family=Gloria+Hallelujah&family=IBM+Plex+Mono:ital@1&family=Kolker+Brush&family=Macondo&family=Pacifico&family=Playfair+Display+SC&family=Poor+Story&family=Prompt&family=Quantico:ital@1&family=Righteous&family=Sacramento&family=Signika:wght@500&family=Space+Mono:ital@1&family=Special+Elite&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Akaya Telivigala', cursive; */
+/* font-family: 'Commissioner', sans-serif;
+font-family: 'Concert One', cursive;
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Dancing Script', cursive; */
+font-family: 'Electrolize', sans-serif;
+}
+:root{
+    --pink: #ff74a4;
+    --violet: #9f6ea3;
+    --lightblack: #515C6F;
+    --white: #ffffff;
+    --darkwhite: #cecaca;
+    --pinkshadow: #ffcbdd;
+    --lightbshadow: rgba(0,0,0,0.15);
+  }
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
+
+}
+.auto{
+    background: white;
+    box-shadow: 1rem 2rem 3rem rgb(0,0,0,0.3);
+    padding: 30px;
+    border-radius: 15px;
+    width: 380px;
+    position: relative;
+}
+.auto i{
+    cursor: pointer;
+}
+.auto .header,.song-timer,.controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.playlist-name{
+    margin: 30px 0px;
+}
+.auto .playlist-name p{
+    text-align: center;
+    font-weight: 700;
+
+}
+.playlist-name p:nth-child(1){
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0 0 20px 0;
+}
+.song-timer span{
+    font-weight: 700;
+}
+.playlist-img{
+    height: 250px;
+    box-shadow: 1rem 2rem 3rem rgb(0,0,0,0.3);
+    border-radius: 15px;
+    /* border-top: 2px solid red;
+    border-bottom: 2px solid red; */
+    margin-top: 30px;
+}
+.playlist-img img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 15px;
+}
+.playlist-name p{
+  color: var(--lightblack);
+
+}
+.progress-area{
+    height: 6px;
+    background: var(--darkwhite);
+    border-radius:15px;
+ cursor: pointer;
+
+}
+.progress-area .progress-bar{
+    background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
+ width: 0%;
+ height:inherit;
+ position: relative;
+}
+.progress-bar::before{
+    content: "";
+    /* background: linear-gradient(var(--pink) 0%, var(--violet) 100%); */
+    background: inherit;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    /* inset: 0; */
+    opacity: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  transform: translateY(-50%);
+  transition: opacity .2s ease all;
+}
+.progress-area:hover .progress-bar::before{
+    opacity: 1;
+}
+.progress-area .song-timer{
+    margin-top: 7px;
+}
+.song-timer span{
+    font-size: 15px;
+    color: var(--lightblack);
+}
+.controls{
+    margin: 50px 0 5px 0;
+}
+.controls i{
+    /* font-size: 28px; */
+    user-select: none;
+    background: linear-gradient(var(--pink) 0%, var(--violet) 100%); 
+    /* background-clip:text; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+.controls i:nth-child(2),
+.controls i:nth-child(4){
+    font-size: 28px;
+}
+.controls i:nth-child(2){
+    margin-right: -28px;
+}
+.controls i:nth-child(4){
+    margin-left: -28px;
+}
+.controls .play-pause{
+  background: linear-gradient(var(--white) 0%, var(--darkwhite) 100%);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 1rem 6rem 3rem var(--pink);
+    width: 54px ;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+}
+.controls .play-pause::before{
+    content: "";
+    background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+}
+.play-pause i{
+    /* width: 43px; */
+    /* height: 43px; */
+    /* line-height: 43px; */
+    text-align: center;
+    background: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+}
+.show {
+font-size: 30px;
+user-select: none;
+background: linear-gradient(red 0%, var(--violet) 100%); 
+/* background-clip:text; */
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}

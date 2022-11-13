@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c48a56f1f5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="auto.css">
+    <title>automusic player</title>
+</head>
+<body>
+    <div class="auto">
+        <div class="header">
+            <i class="fa-solid fa-chevron-down"></i>
+            <h3>now playing</h3>
+            <i class="fa-solid fa-ellipsis"></i>
+        </div>
+
+        <div class="playlist-img">
+            <img src="" alt="">
+        </div>
+        <div class="playlist-name">
+            <p class="name"></p>
+            <p class="artist"></p>
+        </div>
+        <div class="progress-area">
+            <div class="progress-bar">
+                <audio id="main-audio" src=""></audio>
+            </div>
+            <div class="song-timer">
+                <span class="current-time"></span>
+                <span class="max-duration"></span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <i id="repeat" class="fa-sharp fa-solid fa-repeat"></i>
+            <i id="backward-step" class="fa-solid fa-backward-step"></i>
+            <div class="play-pause">
+                <i id="play-pause" class="fa-solid fa-play"></i>
+            </div>
+            <i id="forward-step" class="fa-solid fa-forward-step"></i>
+            <i class="fa-solid fa-headphones"></i>
+        </div>
+    </div>
+
+
+
+    <script src="auto.js"></script>
+    <script src="musiclist.js"></script>
+</body>
+</html>
