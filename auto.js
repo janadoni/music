@@ -11,6 +11,7 @@ var progressbar=document.querySelector('.progress-bar')
 var previousbtn=document.querySelector('#backward-step');
 var nextbtn=document.querySelector('#forward-step');
 var repeatbtn=document.querySelector('#repeat');
+var progressarea=document.querySelector('.progress-area');
 
 // var pauseicon=document.querySelector('.play-pause #pause-play')
 console.log(previousbtn)
@@ -124,3 +125,10 @@ function repeats(){
     playlistaudio.loop=true;
 }
 
+progressarea.addEventListener('click',function (e){
+    let progressWidth=progressarea.clientWidth;
+    let currentwidth=e.offsetX;
+    let songduration=playlistaudio.duration
+    playlistaudio.currentTime=(currentwidth/progressWidth)*songduration;
+    console.log((playlistaudio.currentTime).toFixed(2));
+})
